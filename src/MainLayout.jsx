@@ -1,10 +1,10 @@
 import { Header } from "./Header.jsx";
 import { Outlet } from "react-router";
 
-export function MainLayout() {
+export function MainLayout({ authToken, setAuthToken }) {
   return (
     <div>
-      <Header />
+      <Header authToken={authToken} setAuthToken={setAuthToken} />
       <div style={{ padding: "0 2em" }}>
         <Outlet />
       </div>
